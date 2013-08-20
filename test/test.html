@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <script src="../arcfour.js"></script>
+    <script src="../rand.js"></script>
+    <script src="jsbn.js"></script>
+    <script src="jsbn2.js"></script>
+  </head>
+
+  <body>
+    <div id="mocha"></div>
+  </body>
+  
+    <script src="mocha.js"></script>
+    <script src="chai.js"></script>
+    <script>
+      mocha.setup('bdd');
+      var assert = chai.assert;
+    </script>
+
+    <link href="mocha.css" rel="stylesheet">
+
+    <script src="rand.js"></script>
+
+    <script>
+      mocha.checkLeaks();
+      mocha.globals(['jQuery']);
+      mocha.run();
+    </script>
+</html>
